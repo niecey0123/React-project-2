@@ -4,6 +4,7 @@ import { Route, Link} from 'react-router-dom'
 import Home from './components/Home'
 
 import './App.css';
+import SearchForm from './components/SearchForm';
 
 class App extends Component {
   constructor(){
@@ -38,7 +39,7 @@ class App extends Component {
         </nav>
 
         
-        <main>
+        <main className="main">
         <Route 
         exact path="/resourcelist"  
         render={()=> <ResourceList listing={agencies} /> }
@@ -47,6 +48,7 @@ class App extends Component {
         <Route exact path="/" component={Home}/>
    
     </main>
+    <SearchForm />
       </div>
      
     );

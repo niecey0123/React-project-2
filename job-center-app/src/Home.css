@@ -1,0 +1,19 @@
+*{
+background-image:url(http://www.edgemagazine.net/wp-content/uploads/2017/01/hieronimus.jpg);
+background-position: center center;
+background-repeat:  no-repeat;
+background-attachment: fixed;
+background-size:  cover;
+background-color: #999;
+
+}
+h1{
+    color:green;
+    text-align: end;
+    margin-right: 3%;
+    font-size: 50pt;
+}
+h2{
+    text-align:center;
+    margin-left: 45%;
+}
