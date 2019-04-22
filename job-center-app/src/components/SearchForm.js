@@ -8,7 +8,7 @@ class SearchForm extends Component {
              <h3>Find an Agency near you</h3>
              <label>search</label>
              <input type="text"placeholder="Enter Zipcode"></input>
-             <input type="submit" value="submit"></input>
+             <input className="button" type="submit" value="Submit"></input>
 
 
 

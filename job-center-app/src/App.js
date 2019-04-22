@@ -4,7 +4,7 @@ import { Route, Link} from 'react-router-dom'
 import Home from './components/Home'
 
 import './App.css';
-import SearchForm from './components/SearchForm';
+
 
 class App extends Component {
   constructor(){
@@ -45,10 +45,12 @@ class App extends Component {
         render={()=> <ResourceList listing={agencies} /> }
         />
         {/*  use render if we want to pass props as parameters */}
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" 
+        render={()=> <Home  listing={agencies}/> }
+        />
    
     </main>
-    <SearchForm />
+   
       </div>
      
     );

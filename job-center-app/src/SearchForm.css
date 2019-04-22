@@ -5,14 +5,21 @@ form{
  background-color: white;
  margin-left: 62%;
  margin-top: 5%;
+position: relative;
 
 }
 h3{
     text-align: center;
 }
 label{
-    margin: 5%;
+
+    padding: 5px;
 }
 input{
- 
+    font-size: 15px;
+    padding-top: 5px;
+}
+.button{
+   border:2px solid wheat;
+    padding: px;
 }

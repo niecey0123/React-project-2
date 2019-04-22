@@ -11,7 +11,7 @@ const { listing }= props;
     
     return(
         <div>
-        <h1>Agencies</h1>
+        <h1 className="resouce-title">Agencies</h1>
        
 
  
