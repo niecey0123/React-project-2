@@ -3,6 +3,7 @@ import '../ResourceList.css'
 
 
 
+
 function ResourceList(props) {
 
   
@@ -10,12 +11,11 @@ const { listing }= props;
 
     
     return(
-        <div>
-        <h1 className="resouce-title">Agencies</h1>
-       
+  
+    <div className="">
+      
 
- 
-        {
+      {
         listing.map((list,index )=> (
           <ul key={index} className="train-item">
             <li>Name: {list.facility_name}</li>
@@ -27,9 +27,10 @@ const { listing }= props;
             <li>Zipcode: {list.zip_code}</li>
           </ul>
         ))
-      } 
-   
-          </div>
+      }
+
+     </div>
+
     )
     
 }

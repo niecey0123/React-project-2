@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import ResourceList from './components/ResourceList'
 import { Route, Link} from 'react-router-dom'
 import Home from './components/Home'
+import Map from './components/Map';
 
 import './App.css';
+import ResourceContainer from './components/ResourceContainer';
 
 
 class App extends Component {
@@ -28,28 +30,30 @@ class App extends Component {
   render() {
  const {agencies} = this.state
     return (
-      <div className="App">
+      <div className="container">
                 
-        <nav>
-          <ul>
-            <li><Link to="/resourcelist">Resources</Link></li>
+        <nav className="navbar">
+          <ul className="navbar-start">
+            <li className="navbar-item"><Link to="/resourcecontainer">Resources</Link></li>
             {/* <li><Link to="/stocks">Stocks</Link></li> */}
-            <li><Link to="/">Home</Link></li>
+            <li className="navbar-item"><Link to="/">Home</Link></li>
           </ul>
         </nav>
 
         
-        <main className="main">
+       
         <Route 
-        exact path="/resourcelist"  
-        render={()=> <ResourceList listing={agencies} /> }
+        exact path="/resourcecontainer"  
+        render={()=> <ResourceContainer listing={agencies} /> }
         />
         {/*  use render if we want to pass props as parameters */}
         <Route exact path="/" 
         render={()=> <Home  listing={agencies}/> }
         />
    
-    </main>
+      <div className="mapContainer">
+      <Map component={Map} />
+    </div>
    
       </div>
      
