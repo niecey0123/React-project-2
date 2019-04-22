@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ResourceList from './components/ResourceList'
 import { Route, Link} from 'react-router-dom'
 import Home from './components/Home'
-import Map from './components/Map';
+import Map from './components/Map/Map';
+
 
 import './App.css';
 import ResourceContainer from './components/ResourceContainer';
@@ -21,21 +22,22 @@ class App extends Component {
     .then(response => response.json())
     .then(data =>{
      this.setState({
-       agencies: data
+       agencies:data
      })
      
+  
 
     })
   }
   render() {
- const {agencies} = this.state
+ const agencies = this.state.agencies
+
     return (
       <div className="container">
                 
         <nav className="navbar">
           <ul className="navbar-start">
             <li className="navbar-item"><Link to="/resourcecontainer">Resources</Link></li>
-            {/* <li><Link to="/stocks">Stocks</Link></li> */}
             <li className="navbar-item"><Link to="/">Home</Link></li>
           </ul>
         </nav>
@@ -46,13 +48,12 @@ class App extends Component {
         exact path="/resourcecontainer"  
         render={()=> <ResourceContainer listing={agencies} /> }
         />
-        {/*  use render if we want to pass props as parameters */}
         <Route exact path="/" 
-        render={()=> <Home  listing={agencies}/> }
+        render={()=> <Home  /> }
         />
    
       <div className="mapContainer">
-      <Map component={Map} />
+      <Map listing={agencies} component={Map} />
     </div>
    
       </div>

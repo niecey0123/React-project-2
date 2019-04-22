@@ -25,6 +25,8 @@ const { listing }= props;
             <li>Borough: {list.borough}</li>
             <li>Contact: {list.phone_number_s}</li>
             <li>Zipcode: {list.zip_code}</li>
+            <li>longitude: {list.longitude}</li>
+            <li>latitude: {list.latitude}</li>
           </ul>
         ))
       }
