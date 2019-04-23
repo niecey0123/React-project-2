@@ -1,19 +1,7 @@
-// import React from 'react';
+import React from 'react';
 
-// const FilteredResults = props => (
-  
-//     <form  onSubmit={this.handleSubmit}>
-//              <div className="field">
+const FilteredResults = props => (
+ <h1>hi</h1>
+);
 
-//             <label htmlFor="Filtered-Results" className="label">Find an Agency near you</label>
-//             <div className="control">
-//              <input className="input is-hovered" type="text" placeholder="Enter City" value={props.value} onChange={props.onChange} ></input>
-//              <input className="button" type="submit" value="Submit" ></input>
-
-//             </div>
-//              </div>
-           
-//          </form>
-// );
-
-// export default FilteredResults;
+export default FilteredResults;

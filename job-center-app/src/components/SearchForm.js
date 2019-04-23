@@ -6,7 +6,8 @@ class SearchForm extends Component {
       super(props)
     
       this.state = {
-         borough:[]
+         borough:[],
+         data: []
       }
       this.handleUserInput = this.handleUserInput.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,6 +18,7 @@ class SearchForm extends Component {
         this.setState({
             borough: e.target.value
         })
+       this.props.filter(e.target.value)
        }
 
     handleSubmit(e){
@@ -28,19 +30,22 @@ class SearchForm extends Component {
         .then(data=>{
             console.log(data)
             this.setState({
-                borough: data.borough
+                borough: data.borough,
+                data: data
             })
-            
+           
         })
+        
     }
     
 
 
-
     render() {
         return (
+            
+            <div className="field">
          <form  onSubmit={this.handleSubmit}>
-             <div className="field">
+             
 
             <label className="label">Find an Agency near you</label>
             <div className="control">
@@ -48,9 +53,12 @@ class SearchForm extends Component {
              <input className="button" type="submit" value="Submit" ></input>
 
             </div>
-             </div>
+           
            
          </form>
+         
+         </div>
+         
         );
     }
 }

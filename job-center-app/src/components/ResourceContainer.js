@@ -27,14 +27,14 @@ function ResourceContainer(props) {
         <div className="tile is-parent is-vertical">
           <article className="tile is-child box">
           <h3>Agency Listings</h3>
-          <SearchForm /> 
+          <SearchForm filter={props.filter} listings={listing}/> 
          
            
           </article>
           
           <article className="tile is-child box">
           <div className="list-container">
-        <ResourceList listing={listing}/>
+        <ResourceList afilter={props.afilter} listing={listing}/>
 
      {/* {
        listing.map((list,index )=> (

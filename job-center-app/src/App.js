@@ -11,7 +11,9 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-        agencies:[]
+        agencies:[],
+        agencyfilter:'',
+       
     }
   }
   componentDidMount(){
@@ -22,11 +24,15 @@ class App extends Component {
      this.setState({
        agencies:data
      })
-     
-  
-
-    })
+     })
   }
+
+  handleFilter = (e) =>{
+    this.setState({
+      agencyfilter: e,
+    })
+   }
+
   render() {
  const agencies = this.state.agencies
 
@@ -44,7 +50,7 @@ class App extends Component {
        
         <Route 
         exact path="/resourcecontainer"  
-        render={()=> <ResourceContainer listing={agencies} /> }
+        render={()=> <ResourceContainer afilter={this.state.agencyfilter} filter={this.handleFilter} listing={agencies} /> }
         />
         <Route exact path="/" 
         render={()=> <Home  /> }

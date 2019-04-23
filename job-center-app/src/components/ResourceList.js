@@ -10,14 +10,17 @@ function ResourceList(props) {
   
 const { listing }= props;
 
-    
+    console.log(props.afilter)
     return(
   
     <div>
       
 
       {
-        listing.map((list,index )=> (
+        listing.filter(whatever => {
+          return whatever.borough.toLowerCase() === props.afilter.toLowerCase()
+        })
+        .map((list,index )=> (
           <ul key={index} className="train-item">
             <li>Name: {list.facility_name}</li>
             <span>Address: {list.street_address}</span>
