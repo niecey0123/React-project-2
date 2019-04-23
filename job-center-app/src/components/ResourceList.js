@@ -5,6 +5,7 @@ import '../ResourceList.css'
 
 
 function ResourceList(props) {
+  
 
   
 const { listing }= props;
@@ -12,7 +13,7 @@ const { listing }= props;
     
     return(
   
-    <div className="">
+    <div>
       
 
       {
@@ -25,8 +26,7 @@ const { listing }= props;
             <li>Borough: {list.borough}</li>
             <li>Contact: {list.phone_number_s}</li>
             <li>Zipcode: {list.zip_code}</li>
-            <li>longitude: {list.longitude}</li>
-            <li>latitude: {list.latitude}</li>
+       
           </ul>
         ))
       }

@@ -16,7 +16,7 @@ class Map extends Component {
                 height: 400,
                 latitude:  40.730610,
                 longitude: -73.935242,
-                zoom: 11
+                zoom: 9
               },
               popupInfo: null
         }
@@ -33,7 +33,7 @@ class Map extends Component {
 
         const lat = Number(listing.latitude);
         const lng = Number(listing.longitude);
-        console.log(lng)
+        // console.log(lng)
         return(
        
          <Marker key={`listing-${i}`} longitude={lng} latitude={lat} >
@@ -66,7 +66,7 @@ class Map extends Component {
 
         const listing = this.props.listing
          listing.shift()
-         console.log(listing)
+        //  console.log(listing)
        
         const { viewport } = this.state;
      

@@ -6,21 +6,32 @@ class SearchForm extends Component {
       super(props)
     
       this.state = {
-         cityFilter:[]
+         borough:[]
       }
-      this.handleChange = this.handleChange.bind(this);
+      this.handleUserInput = this.handleUserInput.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(e){
+
+    handleUserInput(e){
         this.setState({
-            cityFilter: e.target.value
+            borough: e.target.value
         })
-    
-    }
+       }
+
     handleSubmit(e){
-        console.log('A city was submitted: ' , this.props);
+        console.log('A city was submitted: ' , this.state.borough);
         e.preventDefault();
+        const url = `https://data.cityofnewyork.us/resource/9d9t-bmk7.json?$q=${this.state.borough}`
+        fetch(url)
+        .then(response=> response.json())
+        .then(data=>{
+            console.log(data)
+            this.setState({
+                borough: data.borough
+            })
+            
+        })
     }
     
 
@@ -33,7 +44,7 @@ class SearchForm extends Component {
 
             <label className="label">Find an Agency near you</label>
             <div className="control">
-             <input className="input is-hovered" type="text" placeholder="Enter City" value={this.state.value} onChange={this.handleChange} ></input>
+             <input className="input is-hovered" type="text" placeholder="Enter City"  onChange={this.handleUserInput} ></input>
              <input className="button" type="submit" value="Submit" ></input>
 
             </div>

@@ -1,10 +1,15 @@
 import React from 'react';
+import Map from './Map/Map';
+
 
 import SearchForm from './SearchForm';
+import ResourceList from './ResourceList';
+
 
 
 function ResourceContainer(props) {
  
+  const { listing }= props;
 
    
     return(
@@ -22,34 +27,57 @@ function ResourceContainer(props) {
         <div className="tile is-parent is-vertical">
           <article className="tile is-child box">
           <h3>Agency Listings</h3>
-          <SearchForm listings={props}/> 
+          <SearchForm /> 
+         
            
           </article>
-  
+          
           <article className="tile is-child box">
-          <h1>Box2</h1>
+          <div className="list-container">
+        <ResourceList listing={listing}/>
+
+     {/* {
+       listing.map((list,index )=> (
+         <ul key={index} className="list-item">
+           <li>Name: {list.facility_name}</li>
+           <span>Address: {list.street_address}</span>
+           <li>Type: {list.comments}</li>
+           <li>City: {list.city}</li>
+           <li>Borough: {list.borough}</li>
+           <li>Contact: {list.phone_number_s}</li>
+           <li>Zipcode: {list.zip_code}</li>
+           <li>longitude: {list.longitude}</li>
+           <li>latitude: {list.latitude}</li>
+         </ul>
+       ))
+     } */}
+
+    </div>
+         
           </article>
         </div>
   
-        <div className="tile is-parent">
+        {/* <div className="tile is-parent">
           <article className="tile is-child box">
           <h1>Box3</h1>
           </article>
-        </div>
+        </div> */}
       </div>
   
       <div className="tile is-parent">
         <article className="tile is-child box">
-        <h1>Box4</h1>
-        </article>
-      </div>
+            <div className="mapContainer">
+                <Map listing={listing} component={Map} />
+              </div>
+          </article>
+        </div>
     </div>
   
-    <div className="tile is-parent">
+    {/* <div className="tile is-parent">
       <article className="tile is-child box">
       <h1>Box5</h1>
       </article>
-    </div>
+    </div> */}
   </div>
   </div>
  

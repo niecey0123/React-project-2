@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import ResourceList from './components/ResourceList'
 import { Route, Link} from 'react-router-dom'
 import Home from './components/Home'
-import Map from './components/Map/Map';
 
 
 import './App.css';
@@ -52,9 +50,9 @@ class App extends Component {
         render={()=> <Home  /> }
         />
    
-      <div className="mapContainer">
+      {/* <div className="mapContainer">
       <Map listing={agencies} component={Map} />
-    </div>
+    </div> */}
    
       </div>
      
