@@ -6,7 +6,10 @@ class JobInfo extends PureComponent {
     const { info } = this.props;
     console.log(info);
     
-    const displayName = `${info.facility_name}`;
+    const displayName = `${info.facility_name}
+    ${info.street_address}
+    
+    `;
 
     return (
       <div>
