@@ -24,6 +24,7 @@ class SearchForm extends Component {
     handleSubmit(e){
         console.log('A city was submitted: ' , this.state.borough);
         e.preventDefault();
+        e.target.reset();
         const url = `https://data.cityofnewyork.us/resource/9d9t-bmk7.json?$q=${this.state.borough}`
         fetch(url)
         .then(response=> response.json())
@@ -49,8 +50,8 @@ class SearchForm extends Component {
 
             <label className="label">Find an Agency near you</label>
             <div className="control">
-             <input className="input is-hovered" type="text" placeholder="Enter City"  onChange={this.handleUserInput} ></input>
-             <input className="button" type="submit" value="Submit" ></input>
+             <input className="input is-hovered" type="text" placeholder="Enter City/Borough"  onChange={this.handleUserInput} ></input>
+             <input className="button is-info" type="submit" value="Submit" ></input>
 
             </div>
            

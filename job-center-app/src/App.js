@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link} from 'react-router-dom'
 import Home from './components/Home'
+import Footer from './components/Footer'
 
 
 import './App.css';
@@ -37,9 +38,9 @@ class App extends Component {
  const agencies = this.state.agencies
 
     return (
-      <div className="container">
+      <div>
                 
-        <nav className="navbar">
+        <nav className="navbar is-warning">
           <ul className="navbar-start">
             <li className="navbar-item"><Link to="/resourcecontainer">Resources</Link></li>
             <li className="navbar-item"><Link to="/">Home</Link></li>
@@ -60,8 +61,9 @@ class App extends Component {
       <Map listing={agencies} component={Map} />
     </div> */}
    
+   <Footer />
       </div>
-     
+  
     );
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import JobPin from './JobPin'
 import JobInfo from './JobInfo'
+import '../../Map.css'
 
 
 
@@ -12,7 +13,7 @@ class Map extends Component {
         super()
         this.state ={
             viewport: {
-                width: 400,
+                width: 725,
                 height: 400,
                 latitude:  40.730610,
                 longitude: -73.935242,

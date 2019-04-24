@@ -6,6 +6,7 @@ import  '../Home.css'
 function Home(props){
    
     return(
+        
         <div className="">
             {/* <img src={require("../images/home.jpg")} alt="" /> */}
             <h1>FINDER'S KEEPER'S</h1>

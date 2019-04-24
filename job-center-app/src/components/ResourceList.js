@@ -10,7 +10,6 @@ function ResourceList(props) {
   
 const { listing }= props;
 
-    console.log(props.afilter)
     return(
   
     <div>

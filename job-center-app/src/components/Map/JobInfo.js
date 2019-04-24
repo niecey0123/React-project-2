@@ -11,6 +11,7 @@ class JobInfo extends PureComponent {
     return (
       <div>
         <div>{displayName}</div>
+        {/* <img width={20} src={info.imag}/> */}
       </div>
     )
 
