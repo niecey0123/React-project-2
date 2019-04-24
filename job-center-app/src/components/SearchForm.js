@@ -7,7 +7,7 @@ class SearchForm extends Component {
     
       this.state = {
          borough:[],
-         data: []
+         
       }
       this.handleUserInput = this.handleUserInput.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,7 +32,7 @@ class SearchForm extends Component {
             console.log(data)
             this.setState({
                 borough: data.borough,
-                data: data
+                
             })
            
         })

@@ -17,10 +17,10 @@ function ResourceContainer(props) {
     
       <div>
       <div className="container">
-      <h1 className="title">Title</h1>
+      <h1 className="title">What's In Your Hood?</h1>
    <h2 className="subtitle">
-      A simple container to divide your page into <strong>sections</strong>, 
-      like the one you're currently reading
+      A simple way to look up resource's in your<strong> neighborhood </strong>, 
+      enter your city location below!
     </h2>
    
 
