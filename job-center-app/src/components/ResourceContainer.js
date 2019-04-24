@@ -4,6 +4,7 @@ import Map from './Map/Map';
 
 import SearchForm from './SearchForm';
 import ResourceList from './ResourceList';
+import '../ResourceContainer.css'
 
 
 
@@ -24,11 +25,11 @@ function ResourceContainer(props) {
    
 
 
-    <div class="tile is-ancestor">
-  <div class="tile">
+    <div className="tile is-ancestor">
+  <div className="tile">
   <SearchForm filter={props.filter} listings={listing}/> 
   </div>
-  <div class="tile ">
+  <div className="tile ">
   <Map listing={listing} component={Map} />
    
   </div>
@@ -39,8 +40,9 @@ function ResourceContainer(props) {
 </div>
 </div>
 
-<div class="columns">
-  <div class="column is-full">
+<div className="columns">
+  <div className="column is-full">
+  <h1 className="agency">Agency Listings</h1>
   <ResourceList afilter={props.afilter} listing={listing}/>
   </div>
   </div>

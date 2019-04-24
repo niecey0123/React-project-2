@@ -1,5 +1,5 @@
 import React from 'react';
-import '../ResourceList.css'
+
 
 
 
@@ -12,7 +12,7 @@ const { listing }= props;
 
     return(
   
-    <div>
+    <div className="listing">
       
 
       {
@@ -20,13 +20,13 @@ const { listing }= props;
           return whatever.borough.toLowerCase() === props.afilter.toLowerCase()
         })
         .map((list,index )=> (
-          <ul key={index} className="train-item">
-            <li>Name: {list.facility_name}</li>
-            <span>Address: {list.street_address}</span>
+          <ul key={index} className="list-item">
+            <span className="names">Name: {list.facility_name}</span>
+            <li>Address: {list.street_address}</li>
             <li>Type: {list.comments}</li>
             <li>City: {list.city}</li>
             <li>Borough: {list.borough}</li>
-            <li>Contact: {list.phone_number_s}</li>
+            <span>Contact: {list.phone_number_s}</span>
             <li>Zipcode: {list.zip_code}</li>
        
           </ul>

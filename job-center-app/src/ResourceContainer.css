@@ -1,0 +1,22 @@
+.listing{
+    
+    margin-left: 10%;
+}
+.list-item{
+    border: solid black;
+    width: 80vw;
+   
+}
+.list-item li{
+    font-size: 15pt;
+    
+}
+span{
+    font-size: 15pt;
+    color: blue;
+}
+.list-item  .names{
+  color: black;
+  /* font-weight: bold; */
+  
+}
