@@ -10,7 +10,7 @@ I created this app to help New Yorkers find job centers in their neighborhoods t
  https://data.cityofnewyork.us/resource/9d9t-bmk7.json
 
 #Screenshots 
-![](../pics/LandingPage.png)
+![](/pics/LandingPage.png)
 # Wireframe: Click The Link Below
 
 https://app.moqups.com/M3ul6Qiddo/view?ui=0
