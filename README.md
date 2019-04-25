@@ -2,7 +2,7 @@
  FINDER'S KEEPER'S
 
 # Description:
-I created this app to help low-income New Yorkers find job centers in their neighborhoods that offer Temporary assistance and other resources available if elgible.
+I created this app to help low-income New Yorkers find job centers in their neighborhoods that offer Temporary assistance and other resources available if eligible.
 
 #Languages Used JavaScript used with React, HTML, & CSS
 
