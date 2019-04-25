@@ -22,7 +22,7 @@ class SearchForm extends Component {
        }
 
     handleSubmit(e){
-        console.log('A city was submitted: ' , this.state.borough);
+        // console.log('A city was submitted: ' , this.state.borough);
         e.preventDefault();
         e.target.reset();
         const url = `https://data.cityofnewyork.us/resource/9d9t-bmk7.json?$q=${this.state.borough}`
@@ -44,21 +44,20 @@ class SearchForm extends Component {
     render() {
         return (
             
-            <div className="field">
-         <form  onSubmit={this.handleSubmit}>
+        <div className="field">
+            <form  onSubmit={this.handleSubmit}>
              
 
-            <label className="label">Find an Agency near you</label>
-            <div className="control">
-             <input className="input is-hovered" type="text" placeholder="Enter City/Borough"  onChange={this.handleUserInput} ></input>
-             <input className="button is-info" type="submit" value="Submit" ></input>
-
-            </div>
+             <label className="label">Find an Agency near you</label>
+                 <div className="control">
+                 <input className="input is-hovered" type="text" placeholder="Enter City/Borough"  onChange={this.handleUserInput} ></input>
+                <input className="button is-info" type="submit" value="Submit" ></input>
+             </div>
            
            
-         </form>
+            </form>
          
-         </div>
+        </div>
          
         );
     }

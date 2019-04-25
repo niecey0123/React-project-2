@@ -7,7 +7,7 @@ class JobInfo extends PureComponent {
     console.log(info);
     
     const displayName = `${info.facility_name}
-    ${info.street_address}
+    ${info.street_address} 
     
     `;
 

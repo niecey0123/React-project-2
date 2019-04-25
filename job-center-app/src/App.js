@@ -39,29 +39,28 @@ class App extends Component {
 
     return (
       <div>
-                
-        <nav className="navbar is-warning">
-          <ul className="navbar-start">
-            <li className="navbar-item"><Link to="/resourcecontainer">Resources</Link></li>
-            <li className="navbar-item"><Link to="/">Home</Link></li>
-          </ul>
-        </nav>
+        <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a className="navbar-item" href="https://bulma.io">
+          <img src="https://static1.squarespace.com/static/5adf87e3e2ccd1ca6c520593/t/5b0ff84d758d4683331756eb/1527773281860/tech-nyc-high-res-logo-1.png" width={112} height={28} />
+      </a>
 
-        
+       <ul className="navbar-start">
+         <li className="navbar-item"><Link to="/">Home</Link></li>
+          <li className="navbar-item"><Link to="/resourcecontainer">Resources</Link></li>
+          </ul>
+      </div>
+    </nav>  
        
-        <Route 
+     <Route 
         exact path="/resourcecontainer"  
         render={()=> <ResourceContainer afilter={this.state.agencyfilter} filter={this.handleFilter} listing={agencies} /> }
         />
-        <Route exact path="/" 
+     <Route exact path="/" 
         render={()=> <Home  /> }
         />
-   
-      {/* <div className="mapContainer">
-      <Map listing={agencies} component={Map} />
-    </div> */}
-   
-   <Footer />
+  
+     <Footer />
       </div>
   
     );

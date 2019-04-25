@@ -40,13 +40,13 @@ class Map extends Component {
          <Marker key={`listing-${i}`} longitude={lng} latitude={lat} >
              <JobPin size ={20} 
              onClick={()=>this.setState({popupInfo: listing})}/> 
-            </Marker>
+        </Marker>
            
         )
         
     }
   
-        _renderPopup() {
+    _renderPopup() {
             const { popupInfo } = this.state;
             const lat = Number(popupInfo.latitude)
             const lng = Number(popupInfo.longitude)
@@ -73,11 +73,11 @@ class Map extends Component {
      
         return (
          <ReactMapGL
-          width={viewport.width}
-          height={viewport.height}
-          latitude={viewport.latitude}
-          longitude={viewport.longitude}
-          zoom={viewport.zoom}
+            width={viewport.width}
+            height={viewport.height}
+            latitude={viewport.latitude}
+            longitude={viewport.longitude}
+            zoom={viewport.zoom}
     
             mapStyle="mapbox://styles/mapbox/light-v9"
             onViewportChange={(viewport) => this.setState({viewport})}
@@ -86,7 +86,7 @@ class Map extends Component {
             {listing.map(this._renderMarker) }
             {this.state.popupInfo && this._renderPopup()}
             
-            </ReactMapGL>
+        </ReactMapGL>
         );
     }
 }

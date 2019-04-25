@@ -5,14 +5,12 @@ import React from 'react';
 
 
 function ResourceList(props) {
-  
 
-  
-const { listing }= props;
+  const { listing }= props;
 
     return(
   
-    <div className="listing">
+       <div className="listing">
       
 
       {
