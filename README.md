@@ -11,6 +11,9 @@ I created this app to help New Yorkers find job centers in their neighborhoods t
 
 #Screenshots 
 ![](/pics/LandingPage.png)
+![](/pics/AgencyListing.png)
+![](/pics/MapPage.png)
+![](/pics/DownloadPage.png)
 # Wireframe: Click The Link Below
 
 https://app.moqups.com/M3ul6Qiddo/view?ui=0
