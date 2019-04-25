@@ -39,8 +39,8 @@ class App extends Component {
 
     return (
       <div>
-        <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
+        <nav className="navbar is-warning" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
             <a className="navbar-item" href="https://bulma.io">
           <img src="https://static1.squarespace.com/static/5adf87e3e2ccd1ca6c520593/t/5b0ff84d758d4683331756eb/1527773281860/tech-nyc-high-res-logo-1.png" width={112} height={28} />
       </a>

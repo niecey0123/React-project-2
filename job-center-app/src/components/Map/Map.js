@@ -17,7 +17,7 @@ class Map extends Component {
                 height: 400,
                 latitude:  40.730610,
                 longitude: -73.935242,
-                zoom: 9
+                zoom: 10
               },
               popupInfo: null
         }
